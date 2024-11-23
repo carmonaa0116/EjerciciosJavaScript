@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .contenido {
+            box-shadow: 0 0 10px #f7f7f711;
+        }
+
+        h1 {
+            margin: 20px;
+
+        }
+
+        .añadir {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px;
+        }
+
+        .añadir > button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        #textoInsertar {
+            resize: none;
+            text-align: left;
+            border-radius: 5px;  
+            
+
+        }
+
+        .contenedorSeleccionar>button {
+            background-color: #2C96F3;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+
+        }
+
+        .contenedorSeleccionar {
+            display: flex;
+            justify-content: center;
+            border: none;
+        }
+
+        #nombres >* {
+            padding: 10px;
+            border-bottom: 1px solid #F8F8F8;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenido">
+        <h1>Seleccion aleatoria</h1>
+        <div class="añadir">
+            <textarea name="textoInsertar" id="textoInsertar" placeholder="Inserta un nombre"></textarea>
+            <button onclick="agregar()">Agregar</button>
+        </div>
+
+        <div id="nombres">
+
+        </div>
+        <div class="contenedorSeleccionar">
+            <button onclick="seleccionarAleatoriamente()" id="botonAñadir">Seleccionar aleatoriamente</button>
+        </div>
+    </div>
+
+    <script>
+        function agregar() {
+            const texto = document.getElementById("textoInsertar").value;
+            const divNombres = document.getElementById("nombres");
+            const pTexto = document.createElement("p");
+            pTexto.textContent = texto;
+            divNombres.appendChild(pTexto);
+            document.getElementById("textoInsertar").value = "";
+        }
+        function seleccionarAleatoriamente() {
+            const nombres = document.getElementById("nombres");
+            const listaNombres = nombres.children;
+
+            console.log(listaNombres.length);
+            if (listaNombres.length > 0) {
+                const nAleatorio = Math.floor(Math.random() * listaNombres.length); // Corrección aquí
+                const pSeleccionada = listaNombres[nAleatorio];
+                pSeleccionada.style.backgroundColor = "yellow";
+                pSeleccionada.textContent = pSeleccionada.textContent + " - Se ha elegido: " + pSeleccionada.textContent;
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

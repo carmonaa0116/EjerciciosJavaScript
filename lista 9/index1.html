@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color:lightskyblue;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        #caja {
+            border: 1px solid black;
+            border-radius: 10px;
+            background-color: lightgreen;
+            width: 100px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            opacity: 1;
+        }
+        
+        button {
+            border-radius: 10px;
+            box-shadow: 5px 5px 0 0;
+            background-color: lightgreen;
+            text-align: center;
+            margin: 10px;
+            padding: 10px;
+            width: 20vw;
+            transform: translateY();
+        }
+
+        button:active {
+            border: none;
+            box-shadow: 0px 0px 0 0;
+            transition: 0.05s;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="alternarVisibilidad()">MOSTRAR / OCULTAR CAJA</button>
+
+    <div id="caja">CAJA</div>
+
+    <script>
+        function alternarVisibilidad(){
+
+            const caja = document.getElementById("caja");
+
+            if(caja.style.opacity === '1'){
+
+                caja.style.opacity = '0';
+
+            } else {
+                caja.style.opacity = '1';
+            }            
+        }
+    </script>
+
+</body>
+</html>
