@@ -1,0 +1,44 @@
+* {
+            
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.container {
+    
+    
+}
+
+.divVerde {
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.divVerde>* {
+    margin: 10px;
+    
+}
+
+.divAzul {
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.contadorClicks {
+    background-color: rgba(165, 42, 42, 0.301);
+}
