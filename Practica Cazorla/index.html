@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parque Natural Sierra de Cazorla</title>
+    <link rel="stylesheet" href="./index.css">
+    <style>
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 2px solid #900;
+            text-align: center;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #cfc;
+        }
+
+        .titulo {
+            text-align: center;
+            color: green;
+            font-size: 20px;
+        }
+        .contenido{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Parque natural Sierra de Cazorla</h1>
+        <img src="./imagenSierraCazrola.jpg" alt="imagenSierraCazorla">
+    </header>
+    <main>
+        <div class="eleccion">
+            <button id="botonInicio">Inicio</button>
+            <button id="botonEspecies">Especies</button>
+            <button id="botonReservas">Reservas</button>
+            <button id="botonGaleria">Galería</button>
+        </div>
+        <div class="contenido">
+
+        </div>
+    </main>
+    <footer>
+        <p>IES Leonardo da Vinci -Albacete-</p>
+    </footer>
+    <script type="module" src="./js/inicio.js"></script>
+    <script type="module" src="./js/especies.js"></script>
+    <script type="module" src="./js/reservas.js"></script>
+    <script type="module" src="./js/galeria.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+@import url(./Comic\ Sans.ttf);
+
+@font-face {
+    font-family: 'Comic Sans';
+    src: url('./Comic\ Sans.ttf') format('truetype');
+}
+
+        /* Estilos aquí (no cambian) */
+
+
+        .contenido {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 0;
+            margin: 10px;
+            gap: 0;
+            border: 1px solid black;
+        }
+
+        .contenido > h2 {
+            background-color: green;
+            width: 100%;
+            text-align: center;
+        }
+
+        .parrafo{
+            padding: 10px;
+        }
+
+        .contenedorTexto {
+            flex: 1;
+            max-width: 60%;
+            text-align: left;
+        }
+
+        .imagenes {
+            flex: 1;
+            max-width: 35%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 10px;
+        }
+
+        .imagenes img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+        }
+
+        html {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            border: 1px solid black;
+            padding-top: 50px;
+            padding-right: 50px;
+            padding-left: 50px;
+        }
+
+        header {
+            border: 1px solid blue;
+            width: 100vw;
+            height: 10vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        header>img {
+            width: inherit;
+            height: inherit;
+        }
+
+        header>h1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-family: 'Comic Sans', sans-serif;
+            color: blue;
+        }
+
+        .eleccion {
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .eleccion>button {
+            padding: 5px;
+            margin: 5px;
+        }
+
+        footer {
+            font-style: italic;
+            text-align: center;
+        }
